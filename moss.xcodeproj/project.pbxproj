@@ -434,7 +434,7 @@
 				DEVELOPMENT_TEAM = 3FN5QYL29S;
 				INFOPLIST_FILE = moss/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yufeng.moss;
+				PRODUCT_BUNDLE_IDENTIFIER = s.g.moss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,7 +449,7 @@
 				DEVELOPMENT_TEAM = 3FN5QYL29S;
 				INFOPLIST_FILE = moss/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yufeng.moss;
+				PRODUCT_BUNDLE_IDENTIFIER = s.g.moss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
