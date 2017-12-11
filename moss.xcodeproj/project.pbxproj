@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5066AB4D1FD8D677001ED8A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066AB4C1FD8D677001ED8A2 /* AppDelegate.swift */; };
-		5066AB4F1FD8D677001ED8A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066AB4E1FD8D677001ED8A2 /* ViewController.swift */; };
+		5066AB4F1FD8D677001ED8A2 /* MySubscriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066AB4E1FD8D677001ED8A2 /* MySubscriptionsViewController.swift */; };
 		5066AB521FD8D677001ED8A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5066AB501FD8D677001ED8A2 /* Main.storyboard */; };
 		5066AB551FD8D677001ED8A2 /* moss.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5066AB531FD8D677001ED8A2 /* moss.xcdatamodeld */; };
 		5066AB571FD8D677001ED8A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5066AB561FD8D677001ED8A2 /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		5066AB491FD8D677001ED8A2 /* moss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5066AB4C1FD8D677001ED8A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5066AB4E1FD8D677001ED8A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5066AB4E1FD8D677001ED8A2 /* MySubscriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySubscriptionsViewController.swift; sourceTree = "<group>"; };
 		5066AB511FD8D677001ED8A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5066AB541FD8D677001ED8A2 /* moss.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = moss.xcdatamodel; sourceTree = "<group>"; };
 		5066AB561FD8D677001ED8A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				5066AB4C1FD8D677001ED8A2 /* AppDelegate.swift */,
-				5066AB4E1FD8D677001ED8A2 /* ViewController.swift */,
+				5066AB4E1FD8D677001ED8A2 /* MySubscriptionsViewController.swift */,
 				5066AB501FD8D677001ED8A2 /* Main.storyboard */,
 				5066AB561FD8D677001ED8A2 /* Assets.xcassets */,
 				5066AB581FD8D677001ED8A2 /* LaunchScreen.storyboard */,
@@ -262,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5066AB4F1FD8D677001ED8A2 /* ViewController.swift in Sources */,
+				5066AB4F1FD8D677001ED8A2 /* MySubscriptionsViewController.swift in Sources */,
 				5066AB551FD8D677001ED8A2 /* moss.xcdatamodeld in Sources */,
 				5066AB4D1FD8D677001ED8A2 /* AppDelegate.swift in Sources */,
 			);
