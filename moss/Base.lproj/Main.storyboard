@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n4Z-F0-JnM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,23 +10,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Subscriptions View Controller-->
+        <!--Settings View Controller-->
+        <scene sceneID="xiE-xF-B4Q">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tL4-3p-5NR" customClass="SettingsViewController" customModule="moss" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="npq-Uc-9hM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Whg-qz-UDz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Settings" leftItemsSupplementBackButton="YES" id="4Ss-JT-ZGW"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="P8Q-H7-as2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jir-0w-aLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621.60000000000002" y="-904.49775112443785"/>
+        </scene>
+        <!--My Subscriptions-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MySubscriptionsViewController" customModule="moss" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MySubscriptionsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MySubscriptionsViewController" customModule="moss" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpU-60-8aK">
-                                <rect key="frame" x="310" y="72" width="49" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="Create"/>
-                                <connections>
-                                    <action selector="_onCreateClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RbL-M0-6Gq"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ARX-B7-Nge">
                                 <rect key="frame" x="105" y="98" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -53,39 +68,122 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5o-H6-YXH">
-                                <rect key="frame" x="16" y="68" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="My Subscriptions" largeTitleDisplayMode="always" id="Mr5-aV-22B">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="OWG-Qh-BSP">
+                            <connections>
+                                <segue destination="tL4-3p-5NR" kind="show" id="pIr-q8-uzX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="v19-ey-50t">
+                            <connections>
+                                <segue destination="MZe-6O-ZzD" kind="presentation" id="dvS-L6-wUH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="btnCreate" destination="kpU-60-8aK" id="Yrw-NU-dtb"/>
                         <outlet property="gridSubscriptions" destination="9a4-QN-dsf" id="7B9-gm-xhl"/>
                         <outlet property="txtTitle" destination="ARX-B7-Nge" id="80t-MO-YJS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+            <point key="canvasLocation" x="682" y="-119"/>
         </scene>
         <!--Create Subscription View Controller-->
-        <scene sceneID="nZd-xx-K8q">
+        <scene sceneID="2pU-f1-HIJ">
             <objects>
-                <viewController storyboardIdentifier="CreateSubscriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5jX-Sn-7ge" customClass="CreateSubscriptionViewController" customModule="moss" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ses-fT-qDS">
+                <viewController storyboardIdentifier="CreateSubscriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MZe-6O-ZzD" customClass="CreateSubscriptionViewController" customModule="moss" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D6d-bV-D6Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evQ-ZJ-F08">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Create Subscription" id="RYc-VD-IE4">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uzj-Se-ehc">
+                                            <connections>
+                                                <segue destination="aBw-Lm-nhQ" kind="unwind" unwindAction="unwindToMySubscriptionsWithSender:" id="6hO-I7-ky1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xsr-Nt-L92">
+                                            <connections>
+                                                <segue destination="aBw-Lm-nhQ" kind="unwind" unwindAction="unwindToMySubscriptionsWithSender:" id="Igd-Qr-6M3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5Op-M7-WSW">
+                                <rect key="frame" x="16" y="340" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wmw-eR-mxa">
+                                <rect key="frame" x="16" y="408" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DefaultSubscriptionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ira-Kr-yNm">
+                                <rect key="frame" x="111" y="103" width="153" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" image="DefaultSubscriptionIcon"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Jb9-JN-zNu" appends="YES" id="Zxo-hK-c3q"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="IWB-e0-gtL"/>
+                        <constraints>
+                            <constraint firstItem="bjd-UU-Ykn" firstAttribute="bottom" secondItem="wmw-eR-mxa" secondAttribute="bottom" constant="229" id="2ia-Jc-NAe"/>
+                            <constraint firstItem="bjd-UU-Ykn" firstAttribute="trailing" secondItem="5Op-M7-WSW" secondAttribute="trailing" constant="16" id="DTZ-cb-qoX"/>
+                            <constraint firstItem="wmw-eR-mxa" firstAttribute="leading" secondItem="bjd-UU-Ykn" secondAttribute="leading" constant="16" id="ERG-69-bhm"/>
+                            <constraint firstItem="5Op-M7-WSW" firstAttribute="leading" secondItem="bjd-UU-Ykn" secondAttribute="leading" constant="16" id="S4K-MY-I9Z"/>
+                            <constraint firstItem="wmw-eR-mxa" firstAttribute="top" secondItem="5Op-M7-WSW" secondAttribute="bottom" constant="38" id="TfQ-u0-UDF"/>
+                            <constraint firstItem="bjd-UU-Ykn" firstAttribute="trailing" secondItem="wmw-eR-mxa" secondAttribute="trailing" constant="16" id="kG1-Bl-400"/>
+                            <constraint firstItem="5Op-M7-WSW" firstAttribute="top" secondItem="bjd-UU-Ykn" secondAttribute="top" constant="320" id="vB7-ui-9N5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bjd-UU-Ykn"/>
                     </view>
+                    <connections>
+                        <outlet property="saveButton" destination="xsr-Nt-L92" id="dCM-Zm-i4U"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xx2-Lc-NAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94o-TO-uAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aBw-Lm-nhQ" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="Jb9-JN-zNu">
+                    <connections>
+                        <action selector="selectSubscriptionIcon:" destination="MZe-6O-ZzD" id="VC6-b9-2WF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="740" y="32"/>
+            <point key="canvasLocation" x="1509.5999999999999" y="-119.1904047976012"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Obe-KG-ks3">
+            <objects>
+                <navigationController id="n4Z-F0-JnM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="637-0M-m8l">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="B2x-Ez-3cU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZm-aJ-4UQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="-226"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DefaultSubscriptionIcon" width="32" height="32"/>
+    </resources>
 </document>

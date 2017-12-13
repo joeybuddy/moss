@@ -7,23 +7,31 @@
 //
 
 import UIKit
+import os.log
 
 class MySubscriptionsViewController: UIViewController {
     
     @IBOutlet weak var btnCreate: UIButton!
     @IBOutlet weak var txtTitle: UITextField!
-    
     @IBOutlet weak var gridSubscriptions: UITableView!
     
-    @IBAction func _onCreateClick(_ sender: UIButton) {
-        if sender == btnCreate{
-            txtTitle.text = "how are you"
-            let CreateSubscriptionViewController = self.storyboard!.instantiateViewController(withIdentifier: "CreateSubscriptionViewController")
-            self.present(CreateSubscriptionViewController, animated: true, completion: nil)
-            //                self.navigationController?.pushViewController(CreateSubscriptionViewController, animated: true)
+//    @IBAction func _onCreateClick(_ sender: UIButton) {
+//        if sender == btnCreate{
+//            let CreateSubscriptionViewController = self.storyboard!.instantiateViewController(withIdentifier: "CreateSubscriptionViewController")
+////            self.present(CreateSubscriptionViewController, animated: true, completion: nil)
+//            self.navigationController?.pushViewController(CreateSubscriptionViewController, animated: true)
+//        }
+//    }
+    
+    // MARK actions
+    @IBAction func unwindToMySubscriptions(sender: UIStoryboardSegue){
+        if let source = sender.source as? CreateSubscriptionViewController {
+            os_log("welcome back")
         }
     }
     
+    
+    // MARK private methods
     func initializeMySubscriptions() {
 //        let subscriptions: [(String,Decimal)] = [
 //            ("Evernote", 168),
