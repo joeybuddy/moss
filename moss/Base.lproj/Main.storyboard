@@ -66,11 +66,27 @@
                         <outlet property="btnCreate" destination="kpU-60-8aK" id="Yrw-NU-dtb"/>
                         <outlet property="gridSubscriptions" destination="9a4-QN-dsf" id="7B9-gm-xhl"/>
                         <outlet property="txtTitle" destination="ARX-B7-Nge" id="80t-MO-YJS"/>
+                        <segue destination="5jX-Sn-7ge" kind="showDetail" id="scE-bp-uKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+        <!--Create Subscription View Controller-->
+        <scene sceneID="nZd-xx-K8q">
+            <objects>
+                <viewController id="5jX-Sn-7ge" customClass="CreateSubscriptionViewController" customModule="moss" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ses-fT-qDS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IWB-e0-gtL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xx2-Lc-NAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="206"/>
         </scene>
     </scenes>
 </document>

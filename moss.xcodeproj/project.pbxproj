@@ -15,6 +15,7 @@
 		5066AB5A1FD8D677001ED8A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5066AB581FD8D677001ED8A2 /* LaunchScreen.storyboard */; };
 		5066AB651FD8D678001ED8A2 /* mossTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066AB641FD8D678001ED8A2 /* mossTests.swift */; };
 		5066AB701FD8D678001ED8A2 /* mossUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066AB6F1FD8D678001ED8A2 /* mossUITests.swift */; };
+		50CF6D2D1FDE26B70084B145 /* CreateSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CF6D2C1FDE26B70084B145 /* CreateSubscriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5066AB6B1FD8D678001ED8A2 /* mossUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mossUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5066AB6F1FD8D678001ED8A2 /* mossUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mossUITests.swift; sourceTree = "<group>"; };
 		5066AB711FD8D678001ED8A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50CF6D2C1FDE26B70084B145 /* CreateSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSubscriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				5066AB581FD8D677001ED8A2 /* LaunchScreen.storyboard */,
 				5066AB5B1FD8D677001ED8A2 /* Info.plist */,
 				5066AB531FD8D677001ED8A2 /* moss.xcdatamodeld */,
+				50CF6D2C1FDE26B70084B145 /* CreateSubscriptionViewController.swift */,
 			);
 			path = moss;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5066AB4F1FD8D677001ED8A2 /* MySubscriptionsViewController.swift in Sources */,
+				50CF6D2D1FDE26B70084B145 /* CreateSubscriptionViewController.swift in Sources */,
 				5066AB551FD8D677001ED8A2 /* moss.xcdatamodeld in Sources */,
 				5066AB4D1FD8D677001ED8A2 /* AppDelegate.swift in Sources */,
 			);
