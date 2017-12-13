@@ -13,7 +13,7 @@
         <!--My Subscriptions View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MySubscriptionsViewController" customModule="moss" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MySubscriptionsViewController" customModule="moss" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,6 @@
                         <outlet property="btnCreate" destination="kpU-60-8aK" id="Yrw-NU-dtb"/>
                         <outlet property="gridSubscriptions" destination="9a4-QN-dsf" id="7B9-gm-xhl"/>
                         <outlet property="txtTitle" destination="ARX-B7-Nge" id="80t-MO-YJS"/>
-                        <segue destination="5jX-Sn-7ge" kind="showDetail" id="scE-bp-uKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,7 +75,7 @@
         <!--Create Subscription View Controller-->
         <scene sceneID="nZd-xx-K8q">
             <objects>
-                <viewController id="5jX-Sn-7ge" customClass="CreateSubscriptionViewController" customModule="moss" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateSubscriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5jX-Sn-7ge" customClass="CreateSubscriptionViewController" customModule="moss" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ses-fT-qDS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xx2-Lc-NAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="206"/>
+            <point key="canvasLocation" x="740" y="32"/>
         </scene>
     </scenes>
 </document>

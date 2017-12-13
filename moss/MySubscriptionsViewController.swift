@@ -18,10 +18,9 @@ class MySubscriptionsViewController: UIViewController {
     @IBAction func _onCreateClick(_ sender: UIButton) {
         if sender == btnCreate{
             txtTitle.text = "how are you"
-            let newViewController = self.storyboard!.instantiateViewController(withIdentifier: "CreateSubscriptionViewController")
-            self.present(newViewController, animated: true, completion: nil)
-            //                let CreateSubscription = self.storyboard?.instantiateViewController(withIdentifier: "CreateSubscription") as! CreateSubscription
-            //                self.navigationController?.pushViewController(CreateSubscription, animated: true)
+            let CreateSubscriptionViewController = self.storyboard!.instantiateViewController(withIdentifier: "CreateSubscriptionViewController")
+            self.present(CreateSubscriptionViewController, animated: true, completion: nil)
+            //                self.navigationController?.pushViewController(CreateSubscriptionViewController, animated: true)
         }
     }
     
