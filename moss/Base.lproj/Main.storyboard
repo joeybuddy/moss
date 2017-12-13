@@ -120,47 +120,48 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5Op-M7-WSW">
-                                <rect key="frame" x="16" y="340" width="343" height="30"/>
+                                <rect key="frame" x="16" y="448" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wmw-eR-mxa">
-                                <rect key="frame" x="16" y="408" width="343" height="30"/>
+                                <rect key="frame" x="16" y="516" width="343" height="30"/>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DefaultSubscriptionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ira-Kr-yNm">
-                                <rect key="frame" x="111" y="103" width="153" height="159"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DefaultSubscriptionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="k84-Co-l57">
+                                <rect key="frame" x="27" y="96" width="317" height="317"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <variation key="heightClass=regular-widthClass=compact" image="DefaultSubscriptionIcon"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Jb9-JN-zNu" appends="YES" id="Zxo-hK-c3q"/>
+                                    <outletCollection property="gestureRecognizers" destination="IN5-J3-GfA" appends="YES" id="xvt-sm-hDe"/>
                                 </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bjd-UU-Ykn" firstAttribute="bottom" secondItem="wmw-eR-mxa" secondAttribute="bottom" constant="229" id="2ia-Jc-NAe"/>
+                            <constraint firstItem="bjd-UU-Ykn" firstAttribute="bottom" secondItem="wmw-eR-mxa" secondAttribute="bottom" constant="121" id="2ia-Jc-NAe"/>
                             <constraint firstItem="bjd-UU-Ykn" firstAttribute="trailing" secondItem="5Op-M7-WSW" secondAttribute="trailing" constant="16" id="DTZ-cb-qoX"/>
                             <constraint firstItem="wmw-eR-mxa" firstAttribute="leading" secondItem="bjd-UU-Ykn" secondAttribute="leading" constant="16" id="ERG-69-bhm"/>
                             <constraint firstItem="5Op-M7-WSW" firstAttribute="leading" secondItem="bjd-UU-Ykn" secondAttribute="leading" constant="16" id="S4K-MY-I9Z"/>
                             <constraint firstItem="wmw-eR-mxa" firstAttribute="top" secondItem="5Op-M7-WSW" secondAttribute="bottom" constant="38" id="TfQ-u0-UDF"/>
                             <constraint firstItem="bjd-UU-Ykn" firstAttribute="trailing" secondItem="wmw-eR-mxa" secondAttribute="trailing" constant="16" id="kG1-Bl-400"/>
-                            <constraint firstItem="5Op-M7-WSW" firstAttribute="top" secondItem="bjd-UU-Ykn" secondAttribute="top" constant="320" id="vB7-ui-9N5"/>
+                            <constraint firstItem="5Op-M7-WSW" firstAttribute="top" secondItem="bjd-UU-Ykn" secondAttribute="top" constant="428" id="vB7-ui-9N5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bjd-UU-Ykn"/>
                     </view>
                     <connections>
                         <outlet property="saveButton" destination="xsr-Nt-L92" id="dCM-Zm-i4U"/>
+                        <outlet property="subscriptionIconImageView" destination="k84-Co-l57" id="tNT-vA-SKN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94o-TO-uAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="aBw-Lm-nhQ" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="Jb9-JN-zNu">
+                <tapGestureRecognizer id="IN5-J3-GfA">
                     <connections>
-                        <action selector="selectSubscriptionIcon:" destination="MZe-6O-ZzD" id="VC6-b9-2WF"/>
+                        <action selector="selectSubscriptionIcon:" destination="MZe-6O-ZzD" id="4cn-hz-CST"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

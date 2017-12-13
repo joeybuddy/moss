@@ -12,6 +12,7 @@ import os.log
 class CreateSubscriptionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var subscriptionIconImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class CreateSubscriptionViewController: UIViewController, UIImagePickerControlle
     
     // MARK: - Actions
     @IBAction func selectSubscriptionIcon(_ sender: UITapGestureRecognizer) {
+        os_log("select image")
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.delegate = self
@@ -41,6 +43,10 @@ class CreateSubscriptionViewController: UIViewController, UIImagePickerControlle
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         //
         os_log("picked")
+        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        }
+        subscriptionIconImageView.image = selectedImage
         dismiss(animated: true, completion: nil)
     }
     

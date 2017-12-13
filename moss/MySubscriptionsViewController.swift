@@ -25,7 +25,7 @@ class MySubscriptionsViewController: UIViewController {
     
     // MARK actions
     @IBAction func unwindToMySubscriptions(sender: UIStoryboardSegue){
-        if let source = sender.source as? CreateSubscriptionViewController {
+        if let _ = sender.source as? CreateSubscriptionViewController {
             os_log("welcome back")
         }
     }
