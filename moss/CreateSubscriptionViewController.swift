@@ -8,6 +8,7 @@
 
 import UIKit
 import os.log
+import CoreData
 
 class CreateSubscriptionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -62,6 +63,16 @@ class CreateSubscriptionViewController: UIViewController, UIImagePickerControlle
         guard let button = sender as? UIBarButtonItem, button === saveButton else {
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
+        }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Subscription", in: context)!
+        let subscription = Subscription(entity: entity, insertInto: context)
+        subscription.setValue("Evernote", forKey: "name")
+        do {
+            try context.save()
+        } catch  {
+            fatalError("error saving context")
         }
     }
 
