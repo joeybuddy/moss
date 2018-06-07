@@ -1,0 +1,6 @@
+framework module Pods_mossUITests {
+  umbrella header "Pods-mossUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

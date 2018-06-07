@@ -13,18 +13,26 @@ import os.log
 class MySubscriptionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     private var subscriptions = [Subscription]()
+    var context: NSManagedObjectContext!
     
     @IBOutlet weak var subscriptionsTableView: UITableView!
-    @IBOutlet weak var btnCreate: UIButton!
     @IBOutlet weak var gridSubscriptions: UITableView!
+    @IBOutlet weak var createButton: UIBarButtonItem!
     
-//    @IBAction func _onCreateClick(_ sender: UIButton) {
-//        if sender == btnCreate{
-//            let CreateSubscriptionViewController = self.storyboard!.instantiateViewController(withIdentifier: "CreateSubscriptionViewController")
-////            self.present(CreateSubscriptionViewController, animated: true, completion: nil)
-//            self.navigationController?.pushViewController(CreateSubscriptionViewController, animated: true)
-//        }
-//    }
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        initializeContext()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initializeContext()
+    }
+    
+    private func initializeContext(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.context = appDelegate.persistentContainer.viewContext
+    }
     
     // MARK actions
     @IBAction func unwindToMySubscriptions(sender: UIStoryboardSegue){
@@ -83,6 +91,24 @@ class MySubscriptionsViewController: UIViewController, UITableViewDelegate, UITa
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let button = sender as? UIBarButtonItem, button === createButton else {
+            os_log("The create button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
+        }
+        let entity = NSEntityDescription.entity(forEntityName: "Subscription", in: self.context)!
+        let subscription = Subscription(entity: entity, insertInto: self.context)
+        let destinationView = segue.destination as! CreateSubscriptionViewController
+        destinationView.viewModel = CreateSubscriptionViewController.ViewModel(subscription: subscription)
+        os_log("about to navigate to create view")
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let context = appDelegate.persistentContainer.viewContext
+//        let entity = NSEntityDescription.entity(forEntityName: "Subscription", in: context)!
+//        let subscription = Subscription(entity: entity, insertInto: context)
+//        segue.destination as! CreateSubscriptionViewController = nil
     }
     
 }
